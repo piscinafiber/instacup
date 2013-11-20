@@ -1,0 +1,180 @@
+/*
+=========== RESET ===========
+*/
+html, body, div, span, applet, object, iframe, table, caption,
+tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+
+body {
+    line-height: 1;
+    color: black;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+/*
+=========== END RESET ===========
+*/
+html, body{ 
+	height: 100%;
+	font-family: arial;
+	overflow: auto;
+}
+
+h2{
+	font-style:arial;
+	color:#005200;	
+}
+
+#wrapper{
+	width: auto;
+	height: 100%;
+	position: absolute;	
+	text-align: left;
+}
+
+#header{
+	width: 100%;
+	height: 85px;
+	position: relative;
+	text-align: left;
+	background-color: #458B00;
+	color:#fff;
+	bottom:-500px;
+	border-top:3px solid;
+	border-top-color:#66CD00;
+	border-bottom: 3px solid;
+	border-bottom-color:#006400;
+	
+	
+
+}
+
+
+#cadastro{	
+	height: 100%;
+	width:70%;	
+	margin-top:10%;
+	background-color: #fff;
+	color:#000;
+	position:relative;
+	border-radius: 15px;
+	margin-left:15%;
+	text-align:center;
+	font-family: arial;
+	border: 3px solid;
+	border-color:#458B00;
+
+}
+
+#footer{
+	bottom: 0px;
+	width: 110%;
+	height: 60px;
+	position: relative;
+	float: right;
+	background-color: #444;
+	color:#fff;
+	padding-top:13px;
+
+	background-color: #458B00;
+	color:#fff;
+	margin-top:5%;
+	border-top:3px solid;
+	border-top-color:#66CD00;
+	border-bottom: 3px solid;
+	border-bottom-color:#006400;
+	font-size:13px;
+	
+}
+
+#cadastro2{	
+	height: 480px;
+	width:550px;
+	position: center;
+	margin-top:-100px;
+	background-color: #fff;
+	color:#000;
+	border-radius: 15px;
+	text-align:center;
+	font-family: arial;
+	border: 3px solid;
+	border-color:#00923F;
+	
+
+}
+
+
+#logo{
+	width:100px;
+	height: 100	px;
+	float: left;
+	left:250px;
+	position: absolute;
+	margin-top: 10px; 
+	background-color: #fff;	
+}
+#interior{
+	width:350px;
+	height: 100	px;
+	float: left;
+	left:430px;
+	position: absolute;
+	margin-top: 0px; 
+	background-color: #fff;
+	color:#7e9c2f;
+	border-color:#7e9c2f;
+	
+}
+@media only screen and (min-width: 1000px) {
+  #footer{
+	font-size:18px;
+  }
+  #cadastro{	
+	height: 100%;
+	width:25%;	
+	margin-top:10%;
+	background-color: #fff;
+	color:#000;
+	position:relative;
+	border-radius: 15px;
+	margin-left:37%;
+	text-align:center;
+	font-family: arial;
+	border: 3px solid;
+	border-color:#458B00;
+
+}
+}
+
+

@@ -1,0 +1,50 @@
+<?php Session_Start(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+		 <meta charset="utf-8" />
+		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
+		<link rel="stylesheet" href="./css/liquid-slider.css">
+		<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/easySlider1.7.js"></script>
+		<title>Instacup - Fonte Nova</title>
+        <script type="text/javascript">
+			
+			$( document ).ready( function(){
+				
+				$( "#cabecalho" ).load( "cabecalho.html" );
+				$( "#rodape" ).load( "rodape.html" );
+			});
+			$(document).ready(function(){	
+			$("#slider").easySlider({
+				auto: true, 
+				continuous: true
+			});
+		});	
+		
+        </script>
+	</head>
+<body background="../../../imagens/campo.jpg" > 
+
+        <div id="cabecalho"></div>
+		<div id="content"><center>
+			<div id="Titulo" ><center><h1>Sobre</h1></div>
+			<div id="abaixoTitulo"></div><br>
+			<img src="../imagens/GRUPO.jpg" width= "630px" style="border-radius:5px;"/></center>
+				<div id="texto-sobre">
+					<h2>O Instacup é uma rede social desenvolvida para a Copa do Mundo de 2014. Com o objetivo de promover a interação entre torcedores, permite que postem fotos, comentários de jogos,	visualizem tabelas, olhem informações das seleções entre outras tantas atividades que se pode fazer na rede. Venha! Compartilhe conosco e com o mundo a sua paixão por futebol. Faça a diferença e torça pela sua seleção.
+				</div>
+	
+			
+		</div>
+			
+			
+			
+			
+</div>				
+</body>
+</html>

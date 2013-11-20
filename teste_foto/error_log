@@ -1,0 +1,16 @@
+[19-Nov-2013 22:55:12] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'nobody'@'localhost' (using password: NO) in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 16
+[19-Nov-2013 22:55:12] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 16
+[19-Nov-2013 23:01:34] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 10
+[19-Nov-2013 23:01:34] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 11
+[19-Nov-2013 23:09:55] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 10
+[19-Nov-2013 23:09:55] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 11
+[19-Nov-2013 23:50:18] PHP Warning:  fopen() [<a href='function.fopen'>function.fopen</a>]: Filename cannot be empty in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 9
+[19-Nov-2013 23:50:18] PHP Warning:  fread() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 10
+[19-Nov-2013 23:50:18] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 11
+[19-Nov-2013 23:53:51] PHP Warning:  fopen() [<a href='function.fopen'>function.fopen</a>]: Filename cannot be empty in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 9
+[19-Nov-2013 23:53:51] PHP Warning:  fread() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 10
+[19-Nov-2013 23:53:51] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/formulario_envia.php on line 11
+[19-Nov-2013 23:56:17] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 10
+[19-Nov-2013 23:56:17] PHP Warning:  mysql_result() expects parameter 1 to be resource, boolean given in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 11
+[19-Nov-2013 23:56:46] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 3 in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 10
+[19-Nov-2013 23:56:46] PHP Warning:  mysql_result() [<a href='function.mysql-result'>function.mysql-result</a>]: Unable to jump to row 0 on MySQL result index 3 in /home/tipboxar/public_html/instacup/teste_foto/visualiza_imagem_foto.php on line 11

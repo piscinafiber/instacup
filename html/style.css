@@ -1,0 +1,914 @@
+ /*
+=========== RESET ===========
+*/
+html, body, div, span, applet, object, iframe, table, caption,
+tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+
+body {
+    line-height: 1;
+    color: black;
+	background:url(../imagens/campo.jpg);
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+blockquote, q {
+    quotes: "" "";
+}
+/*
+=========== END RESET ===========
+*/
+html, body{ 
+	height: 100%;
+	font-family: arial;
+	overflow: auto;
+}
+.nomejogador{
+	color:#000;
+	text-align: Justify;
+	font-size:18px;
+}
+a:link{
+text-decoration: none;
+ color:#fff;
+}
+
+a:visited{
+text-decoration: none;
+ color:#fff;
+}
+a:hover{
+text-decoration: none;
+ color:#cdcdcf;
+}
+h6{
+	font-style:arial;
+	font-size:10;
+}
+h1{
+	color:#7e9c2f;
+	font-style:Verdana;
+	
+}
+h2{
+	color:#7e9c2f;
+	text-align: Justify;
+	font-size:18px;
+}
+h3{
+	color:#fff;
+	text-align: Justify;
+	font-size:18px;
+}
+h4{
+	color:#7e9c2f;
+	text-align: Justify;
+	font-size:8px;
+}
+
+
+
+h1{font-size:2.5em}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  -webkit-border-radius: 2px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #e7f6cd;
+  -webkit-border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: #7e9c2f;
+  -webkit-border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 8px;
+  background-color: #666;
+  -webkit-border-radius: 3px;
+}
+
+ .div1{
+	margin-left:10px;
+	width:90px;
+	height:50px;
+	position:absolute;
+
+    }
+
+	.flutuante1{	
+
+	margin-top:6%;
+	margin-left:10px;
+	width:90px;
+	height:70px;
+	
+	text-align:center;
+	position:absolute;
+	color:#cdcdcd;
+}
+	.div2{
+	margin-left:100px;
+	width:90px;
+	height:50px;
+	position:absolute;
+
+    }
+
+.classname:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #dedede) );
+	background:-moz-linear-gradient( center top, #ffffff 5%, #dedede 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dedede');
+	background-color:#ffffff;
+}
+.classname:active {
+	position:relative;
+	top:1px;
+	}
+.nome-estadio{
+width:200px;
+height: 25px;
+background-color:rgba(0,0,0,0.8);
+text-align:center;
+margin-top:-44px;
+margin-bottom:30px;
+color:#fff;
+position:relative;
+font-size:20px;
+}
+.txtarea {
+height: 30px;
+}
+#wrapper{
+	width: 80%;
+	margin:  auto;
+	height: 580px;
+	text-align: left;
+	color:#00923F;
+	background-color: #f1f6e3;
+	margin-left:10%;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-top:1px solid;	
+	z-index:0;
+}
+#foto{
+	width:100px;
+	height: 100px;
+	float: left;
+	margin-left:-115px;
+	position: relative;
+	margin-top: 20px; 
+	color: #000;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+#texto{
+	width:10%;
+	height: 3%;
+	float: left;
+	margin-left:60px;
+	position: relative;
+	margin-top: 190px; 
+	background-color: none;	
+	font-family: arial;
+	color:#00923F;
+}
+#content{
+	width: 835px;
+	height: 580px;
+	float:left;
+	position: absolute;
+	background-color: #fff;
+	text-align: justify;
+	margin-top: -580px;
+	margin-left:25%;
+	margin-right:30%;
+	border-bottom-right-radius: 15px;
+	overflow:auto;	
+	color:#bcd295;	
+	z-index:1;
+
+}
+#teste{
+	width: 50px;
+	position: relative;
+	margin-left:40px;
+	text-align:center;
+	margin-top: 0px; 
+	bottom:5px;
+	background-color: #none;	
+	font-family: Verdana;
+	color:#fff;
+	text-decoration: none;
+}
+
+#header{
+width:100%;
+	height: 45px;
+	position: relative;
+	text-align: left;
+	background-color: #00923F;
+	color:#fff;
+	border-bottom: 1px solid;
+
+}
+
+#botoes{
+	width: 216px;
+	height: 25px;
+	position: relative;
+	left:155px;
+	text-align:left;
+	background-color: none;
+	color:#000;
+	border:1px;
+	margin-top: 220px;
+	bottom:5px;
+}
+#logo {	
+	width: 128px;
+	height: 45px;
+	background-color: #00923f;
+}
+#logo:hover {
+	width: 128px;
+	height: 45px;
+	background-color: #00a93f;
+}
+p{padding:6px;}
+#postar {	
+	margin-top:-3px;
+	width: 60px;
+	height: 32px;
+	background-color: #00923f;
+	text-align:center;
+	font-size:17px;
+	font-style:arial;
+	position:absolute;	
+	cursor:pointer;
+	margin-left:7px;
+
+}
+
+#postar:hover {
+	margin-top:-3px;
+	width: 60px;
+	height: 32px;
+	background-color: #00a93f;
+
+}
+
+#menucima{
+	width: 570px;
+	height: 25px;
+	position: relative;
+	left:400px;
+	text-align:center;
+	margin-top: -27px; 
+	bottom:5px;
+	background-color: #none;	
+	font-family: Verdana;
+	color:#fff;
+	text-decoration: none;
+
+}
+#brasao{
+	width:50px;
+	height: 100	px;
+	float: left;
+	left:650px;
+	position: absolute;
+	margin-top: 50px; 
+	background-color: #000;	
+	
+}
+#fotojogador{
+	width:100px;
+	height: 100	px;
+	left:60px;
+	position: absolute;
+	margin-top: 50px; 
+}
+#textojogador{
+	width:350px;
+	height: 350	px;
+	float: left;
+	left: 293px;
+	position: absolute;
+	margin-top: 50px; 
+	background-color: none;	
+	word-wrap: break-word;
+	}
+	
+#fotosel{
+	width:100px;
+	height: 100	px;
+	left:60px;
+	position: absolute;
+	margin-top: 15px; 
+}
+#textosel1{
+	width:350px;
+	height: 150	px;
+	float: left;
+	left: 420px;
+	position: absolute;
+	margin-top: 30px; 
+	background-color: none;	
+	word-wrap: break-word;
+	}
+#textosel2{
+	width:500px;
+	height: 215px;
+	float: left;
+	left: 30px;
+	position: absolute;
+	margin-top: 280px; 
+	background-color: none;	
+	border-radius:5px;
+	word-wrap: break-word;
+	border:1px solid;
+	padding-left:15px;
+	padding-right:15px;
+	}
+
+#mapasel{
+	width:100px;
+	height: 215px;
+	left:570px;
+	position: absolute;
+	margin-top: 280px;
+	background-color:#000;
+}
+
+#nome{
+	width:100%;
+	height: 30px;
+	float: left;
+	position: absolute;
+	margin-top: 230px; 
+	text-align: center;
+	color:#fff;
+	
+}
+#Titulo{
+	width: 620px;
+	height: 30px;
+	float:center;
+	position: relative;
+	background-color: #none;
+	margin-top: 10px; 	
+}
+#brasao-selecao-tela-lista-jogador{
+	position:fixed;
+	top:220px;
+	left:900px;
+	height:200px;
+
+}
+.balaodialogo {
+position: relative;
+background-color: #cdcdcd;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+width: 800px;
+height: 150px;
+line-height: 150px; /* vertically center */
+color: #fff; /* cor de fundo da div do triangulo */
+text-align: center;
+left:10%;
+top:10px;
+} 
+.balaodialogo:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-bottom-color: #f1f6e3;
+  left: 2%;
+  bottom: 100%;
+  margin-left: 0px;
+  
+}
+#Postagem{
+	margin-left:25px;
+	margin-top:7px;
+	position: relative;
+	background-color: #f1f6e3;
+	width: 621px;
+	height: 39px;
+	text-align: center;
+	left:10%;
+	top:10px;
+	
+}
+.showpostagem{	
+	position:absolute;
+	display:none;
+	color:#fff;
+	width: 620px;
+	height: 32px;
+	margin-top:13px;
+	border:1px solid;
+	border-top:none;
+	left:107px;
+	cursor:pointer;
+	
+}
+.icones{
+	height: 30px;
+	margin-top:-2px;
+	margin-bottom:0px;
+	margin-left:0px;
+	width:35px;
+	color:#bcd295;
+	background-color:#f1f6e3;	
+}
+.icones:hover{
+	height: 30px;
+	margin-top:-2px;
+	margin-bottom:0px;
+	margin-left:0px;
+	width:35px;
+	background-color:#cdcdcd;	
+}
+.icones:after{
+	height: 30px;
+	margin-top:-2px;
+	margin-bottom:0px;
+	margin-left:0px;
+	width:35px;
+	background-color:#cdcdcd;	
+}
+#abaixoTitulo{
+	width: 620px;
+	height: 2px;
+	float:center;
+	position: relative;
+	background-color: #f1f6e3;
+	text-align: justify;
+	margin-top: 20px;	
+}
+#abaixoTitulo2{
+	width: 520px;
+	height: 2px;
+	float:center;
+	position: relative;
+	background-color: #f1f6e3;
+	text-align: justify;
+	margin-top: 20px;	
+}
+#texto-sobre{
+	width:600px;
+	height: 115px;
+	float: left;
+	left: 100px;
+	position: absolute;
+	margin-top: 15px; 
+	background-color: none;	
+	border-radius:5px;
+	word-wrap: break-word;
+	border:1px solid;
+	text-align: justify;
+	padding-top:5px;
+	padding-left:15px;
+	padding-right:15px;
+}
+/* TELA DE ENTRADA DOS JOGADORES */
+#esolha-selecao{
+	background-color:#fff;
+	position:relative;
+	width:175px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	}
+#esolha-selecao:hover{
+	background-color:#f1f6e3;
+	position:relative;
+	width:175px;
+}
+/* FIM TELA DE ENTRADA DOS JOGADORES */
+#abaixonomejogador{
+	width: 372px;
+	height: 2px;
+	float:center;
+	position: relative;
+	background-color: #fff;
+	text-align: justify;
+	margin-top: 5px;	
+}
+#texto_selecao{
+	width:600px;
+	height: 500	px;
+	float: left;
+	left: 115px;
+	position: absolute;
+	margin-top: 20px; 
+	background-color: none;	
+	}
+
+/* ICONES QUE FICAM ABAIXO DA FOTO */
+	
+a.dcontexto {
+	position: relative;
+	font: 12px arial, verdana, helvetica, sans-serif;
+	padding: 0;
+	color: #039;
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 24;
+}
+a.dcontexto:hover {
+	background: transparent;
+	z-index: 25;
+}
+a.dcontexto span {
+	display: none;
+}
+a.dcontexto:hover span {
+	display: block;
+	position: absolute;
+	width: 50px;
+	top: 15px;
+	text-align: center;
+	left: px;
+	font: 10px Verdana, arial, helvetica, sans-serif;
+	padding: 5px 10px;
+	border: 1px solid #00a93f;
+	background: #e7f6cd;
+	color: #000;
+}
+
+/* FIM ICONES ABAIXO DA FOTO */
+
+
+
+/* BOTAO SAIR PARTE SUPERIOR ESQUERDA */
+#sair{
+	position:relative;
+	top:-45px;
+	float:right;
+	width: 45px;
+	height: 45px;
+	background-color: #00923f;	
+}
+#sair:hover {
+	background-color: #00a93f;
+}
+/* FIM BOTAO SAIR */
+
+/* PLACAR */
+#textodetalhesel1{
+	width:200px;
+	height: 150	px;
+	float: left;
+	left: 120px;
+	position: absolute;
+	margin-top: 280px; 
+	background-color: none;	
+	word-wrap: break-word;
+	}
+#textodetalhesel2{
+	width:200px;
+	height: 150	px;
+	float: left;
+
+	position: absolute;
+	margin-top: 280px; 
+	background-color: none;	
+	word-wrap: break-word;
+	}
+#fotoplacar1{
+	height: 210px;
+	
+	float: left;
+	left: 120px;
+	position: absolute;
+	margin-top: 20px; 
+	background-color: none;	
+	word-wrap: break-word;
+	}
+#fotoplacar2{
+	height: 150	px;
+	float: left;
+	left: 560px;
+	position: absolute;
+	margin-top: 20px; 
+	background-color: none;	
+	word-wrap: break-word;
+	}
+#detalhesestadio{
+	width:100px;
+	height: 150	px;
+	float: left;
+	left: 380px;
+	position: absolute;
+	margin-top: 250px;
+	background-color: none;	
+	word-wrap: break-word;	 
+	}
+#detalheslocal{
+	width:100px;
+	height: 150	px;
+	float: left;
+	left: 380px;
+	position: absolute;
+	margin-top: 280px;
+	background-color: none;	
+	word-wrap: break-word;	 
+	}
+#detalhesdata{
+	width:100px;
+	height: 150	px;
+	float: left;
+	left: 380px;
+	position: absolute;
+	margin-top: 310px;
+	background-color: none;	
+	word-wrap: break-word;	 
+	}
+#detalheshora{
+	width:100px;
+	height: 150	px;
+	float: left;
+	left: 380px;
+	position: absolute;
+	margin-top: 340px;
+	background-color: none;	
+	word-wrap: break-word;	 
+	}
+#textoplacar{
+	height: 150	px;
+	position: relative;
+	margin-top: 40px; 
+	background-color: none;	
+	word-wrap: break-word;
+	font-size:35px;
+	}
+/* FIM PLACAR */
+
+/* Perfil do usuario */
+#LinkPerfil{
+	width:228px;
+	height: 128px;
+	float: left;
+	left: 210px;
+	position: absolute;
+	margin-top: -590px; 
+	background-color: #fff;	
+	font-size:3em;
+	border:1px solid;
+}
+#ImgLinkPerfil{
+	width:128px;
+	height: 128px;
+	float: left;
+	left: 0px;
+	position: absolute;
+	margin-top: 0px; 
+	background-color: #fff;	
+	font-size:3em;
+}
+#LinkGaleria{
+	width:228px;
+	height: 128px;
+	float: left;
+	left: 210px;
+	position: absolute;
+	margin-top: -440px; 
+	background-color: #fff;	
+	font-size:3em;
+	border:1px solid;
+}
+#ImgLinkGaleria{
+	width:128px;
+	height: 128px;
+	float: left;
+	left: 0px;
+	position: absolute;
+	margin-top: 0px; 
+	background-color: #000;	
+	font-size:3em;
+}
+#LinkPost{
+	width:228px;
+	height: 128px;
+	float: left;
+	left: 210px;
+	position: absolute;
+	margin-top: -290px; 
+	background-color: #fff;	
+	font-size:3em;
+	border:1px solid;
+}
+#ImgLinkPost{
+	width:128px;
+	height: 126px;
+	float: left;
+	left: 0px;
+	position: absolute;
+	margin-top: 0px; 
+	background-color: #fff;	
+	font-size:3em;
+	border:1px solid;
+}
+
+/* RODAPE */
+#footer{
+        margin-left:0 px;
+        position:absolute;
+        margin-top: 47.9%;
+  		width: 100%;
+        height: 25px;
+  		background-color:00923F;
+		color:#fff;
+		text-align:center;
+		font-size:12px;
+}
+/* MENU LATERAL */
+#sidebar{
+	width:18%;
+	width: 180px;
+	height: 170PX;
+	float: left;
+	margin-left:-145px;
+	position: ABSOLUTE;
+	background-color: #none;
+	border-radius:5px;
+	margin-top: 10px; 
+}
+#sidebarADM{
+	width:18%;
+	width: 180px;
+	height: 170PX;
+	float: left;
+	margin-left:-145px;
+	position: ABSOLUTE;
+	background-color: #none;
+	border-radius:5px;
+	margin-top: 10px; 
+}
+#sidebarE{
+	width:5px;
+	width: 180px;
+	height: 174px;
+	left:800px;
+	position: ABSOLUTE;
+	border-radius:5px;
+	background-color: #00923F;
+	margin-top: -5px; 
+}
+#sidebar ul{
+	list-style: none;
+	margin-top: -5px ;
+}
+#sidebarADM ul{
+	list-style: none;
+	margin-top: -5px ;
+}
+#sidebar ul li{
+	height: 10px;
+	margin-top: 7px ;
+	margin-bottom: 7px ;
+	margin-left: -10px ;
+	padding:4px;
+	padding-right:10px;
+	padding-top:0px;	
+	padding-bottom: 17px;	
+	background-color: #fff;
+	color:#f1f6e3;	
+	cursor: pointer;
+
+
+	
+}
+#sidebarADM ul li{
+	height: 10px;
+	margin-top: 7px ;
+	margin-bottom: 7px ;
+	margin-left: -10px ;
+	padding:4px;
+	padding-right:10px;
+	padding-top:0px;	
+	padding-bottom: 17px;	
+	background-color: #fff;
+	color:#f1f6e3;	
+	cursor: pointer;
+
+
+	
+}
+#sidebar ul  li:hover{
+	height: 10px;
+	margin-top: 7px ;
+	margin-bottom: 7px ;
+	margin-left: -10px ;
+	padding-left:4px;
+	padding-top:0px;	
+	padding-bottom: 17px;	
+	color:#7e9c2f;	
+	cursor: pointer;
+	border-right:5px solid;
+	border-left:4px solid;
+
+	
+}
+#sidebarADM ul  li:hover{
+	height: 10px;
+	margin-top: 7px ;
+	margin-bottom: 7px ;
+	margin-left: -10px ;
+	padding-left:4px;
+	padding-top:0px;	
+	padding-bottom: 17px;	
+	color:#7e9c2f;	
+	cursor: pointer;
+	border-right:5px solid;
+	border-left:4px solid;
+
+	
+}
+#sidebarE a:hover { 
+background-color: #cdcdcd;	
+}
+#sidebarEADM a:hover { 
+background-color: #cdcdcd;	
+}
+
+
+#btn-voltar-lista-jogador{
+	background-color:#7e9c2f;
+}
+#nomecomentario{
+	width: 600px;
+	padding:10px;
+	background-color: #cdcdcd;
+	border:1px solid;	
+	position:absolute;
+}
+#comentario-feed{
+	width: 790px;
+	margin-left:10px;
+	padding:10px;
+	word-wrap: break-word;
+	margin-top:80px;
+	background-color: #fff;
+	border:1px solid;
+	position:absolute;	
+	z-index:3;
+}
+#formulario-index{
+	width: 830px;
+	height: 80px;
+	margin-top:0px;
+	float:center;
+	position:center;
+	z-index:4;
+	color:#7e9c2f;
+	font-size:10px;
+	background-color:#f1f6e3;
+	border-bottom:2px solid;
+	border-left:2px solid;
+	border-color:#fff;
+}
+#comentario{
+	width:100%;
+	resize:none;
+}

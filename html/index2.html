@@ -1,0 +1,82 @@
+<?php Session_Start(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+		 <meta charset="utf-8" />
+		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
+		<link rel="stylesheet" href="./css/liquid-slider.css">
+		<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="jquery-1.7.1.js"></script>
+		<title>Instacup - Início</title>
+        <script type="text/javascript">
+			
+			$( document ).ready( function(){
+				
+				$( "#cabecalho" ).load( "cabecalho.html" );
+				$( "#rodape" ).load( "rodape.html" );
+			});
+				$(document).ready(function()
+		{
+
+			$("#Postagem").click(function(){
+				$(".showpostagem").show();
+				$(".showpostagem").css("background-color","#f1f6e3");
+				$("#Postagem").css("height","62px");
+			});
+			});
+			$(function() {
+				$( "#check" ).button();
+				$( "#format" ).buttonset();
+			});
+  </script>
+  <style>
+  #format { margin-top: 2em; }
+  </style>
+		
+		
+
+	</head>
+    <div id="cabecalho"></div>
+		<div id="content">
+		<div><IMG src="../icones/torca.png" height="26"  style="padding-left:125px; margin-top:5px;">&nbspTorça</div>
+		<div id="Postagem" class="balaodialogo"><br>
+		<textarea rows="2" cols="75" name="txt_obs" value="Venha Torcer conosco!" id="txt" style="margin-top:-148px; border:none;color:#00923f;  border-top-right-radius: 10px; border-top-left-radius: 10px;"></textarea>
+			</div>
+			<div class="showpostagem">
+				<table width="620px" style="float:left; border-color:#bcd295 ">
+					<tr height="2px"></tr>
+					<tr >
+						<td width="10px" >
+							<div class="icones"><center>
+							<IMG src="../icones/estadio2.png" height="26"  style="padding:2px;">
+							</div>
+						</td>
+							<td width="10px">
+							<div class="icones"><center>
+							<IMG src="../icones/bola.png" height="26" style="padding:2px;">
+							</div>
+						</TD>
+
+						<td >
+							<div class="icones"><center>
+							<IMG src="../icones/brasao.png" height="26" style="padding:2px;" >
+							</div>
+						</td>
+						<td width="200px"></td>					
+						<td width="65px">
+							<div id="postar" style="color:#fff;"><p>Torcer</p></div>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+
+		</div>
+		<br> 
+
+		</div> 
+	</div>	
+</body>
+</html>
