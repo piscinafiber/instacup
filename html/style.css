@@ -912,3 +912,18 @@ background-color: #cdcdcd;
 	width:100%;
 	resize:none;
 }
+
+
+#btn-torcer{
+	position: relative;
+	float: right;
+	/*background-color: #5BB75B;*/
+	/*border: 0;*/
+	/*padding: 3px 6px;*/
+	/*cursor: pointer;*/
+}
+
+#btn-photo{
+	float:right; 
+	margin-right:5px;
+}

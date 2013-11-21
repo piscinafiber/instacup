@@ -8,7 +8,11 @@ Session_Start();
 		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
 		<link rel="stylesheet" href="./css/liquid-slider.css">
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+
      	<script type="text/javascript" src="jquery-1.7.1.js"></script>
+     	<script type="text/javascript" src="./js/bootstrap.js"></script>
+     	<script type="text/javascript" src="./js/jquery.form.js"></script>
 		
 	    <script type="text/javascript">
 			
@@ -16,6 +20,43 @@ Session_Start();
 				
 				$( "#cabecalho" ).load( "cabecalho.html" );
 				$( "#rodape" ).load( "rodape.html" );
+
+				$('#btnEnviar').click(function(){
+					$('#formUpload').ajaxForm({
+						uploadProgress: function(event, position, total, percentComplete) {
+							$('progress').attr('value',percentComplete);
+							$('#porcentagem').html(percentComplete+'%');
+						},
+						success: function(data) {
+							$('progress').attr('value','100');
+							$('#porcentagem').html('100%');
+							if (data.status == 'ok') {
+								$("#formUpload").find('input[name=base64_foto]').val(data.img);
+								$("#formUpload").find('input[name=base64_tipo]').val(data.type);
+								$("#resposta").css('background','url(data:'+data.type+';base64,'+data.img+')');
+								$("#resposta").css('width','400px');
+								$("#resposta").css('height',data.height);
+								$('#porcentagem').hide();
+								$('progress').hide();
+								var comment = document.formtorcer.comentario.value; 
+								$("#formUpload").find('textarea').val(comment);
+
+							}
+						},
+						error : function(){
+							$('#resposta').html('Erro ao enviar requisição!!!');
+						},
+						dataType: 'json',
+						url: 'enviar_arquivo.php',
+						resetForm: true
+					}).submit();
+				});
+
+				$('#myModal').modal('hidden',function(){
+					$("#resposta").removeAttr('style');
+				})
+
+
 			});
 				$(document).ready(function()
 		{
@@ -51,7 +92,9 @@ Session_Start();
 				usuario = document.formtorcer.cod_user.value;
 				selecao = document.formtorcer.cod_sel.value;
 				nome = document.formtorcer.nome.value;
-				var_post = "comentario="+comment+"&data_feed="+data_comment+"&codigo_usuario="+usuario+"&selecao_usuario="+selecao+"&nome_usuario="+nome;
+				foto = document.formUpload.base64_foto.value;
+				tipo = document.formUpload.base64_tipo.value;
+				var_post = "comentario="+comment+"&data_feed="+data_comment+"&codigo_usuario="+usuario+"&selecao_usuario="+selecao+"&nome_usuario="+nome+"&foto="+foto+"&tipo="+tipo;
 				xmlhttp.send(var_post);
 				
 				xmlhttp.onreadystatechange=function()
@@ -88,6 +131,23 @@ Session_Start();
 					}
 				}
 		}
+
+
+		function modalUpload(event) {
+			event.preventDefault();
+			var comment = document.formtorcer.comentario.value; 
+			$("#formUpload").find('textarea').val(comment);
+			$("#modal").modal('show');
+			$("#arquivo").click();
+			$('#porcentagem').show();
+			$('progress').show();
+			$('progress').attr('value','0');
+			$('#porcentagem').html('0%');
+
+
+			// alert('modal - ' +  comment );
+		}
+
 	  </script>
 	  <script language="javascript" type="text/javascript">
 		function limitText(limitField, limitCount, limitNum) {
@@ -114,16 +174,47 @@ Session_Start();
 				<textarea name="comentario" id="comentario" style="resize:none; border-color:#7e9c2f" onKeyDown="limitText(this.form.comentario,this.form.countdown,75);" 
 				onKeyUp="limitText(this.form.comentario,this.form.countdown,75);" ></textarea><br>
 				
-				<input readonly type="text" name="countdown" size="1" value="75" style="resize:none; border:none;color:#7e9c2f; background-color:#f1f6e3;">caracteres restantes.<input type="button" name="acao" value="Torcer" onClick="insere_feed()" style="float: right;"/><br>
+				<input readonly type="text" name="countdown" size="1" value="75" style="resize:none; border:none;color:#7e9c2f; background-color:#f1f6e3;">caracteres restantes.<input type="button" name="acao" value="Torcer" onClick="insere_feed()" id="btn-torcer" class="btn btn-success" style=""/><a href="#" onclick="modalUpload(event)"><img src="./img/camera-icon.png" alt="Enviar imagem" width="28" id="btn-photo" style=""></a><br>
 				</div>
 				<br>
 			</form>
 			</div>
 			<div id="feed" style="margin-top:10px; overflow:auto;" ></div><br>
 		
-	</div>		
+	</div>
 	<script>
 		lista_feeds();
 	</script>
 </body>
 </html>
+<div id="modal" class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Foto</h3>
+	</div>
+	<div class="modal-body">
+	<form name="formUpload" id="formUpload" method="post">
+    	<textarea name="comentario" id="comentario" style="resize:none; border-color:#7e9c2f" onKeyDown="limitText(this.form.comentario,this.form.countdown_modal,75);" 
+				onKeyUp="limitText(this.form.comentario,this.form.countdown_modal,75);" ></textarea>
+		<br>
+		<input readonly type="text" name="countdown_modal" size="1" value="75" style="resize:none; border:none;color:#7e9c2f; background-color:#f1f6e3;">caracteres restantes.
+		<input type="hidden" name="base64_foto" size="1" />
+		<input type="hidden" name="base64_tipo" size="1" />
+		<br>
+		<br>
+
+	    <label class="hide">Selecione o arquivo: <input type="file" name="arquivo" id="arquivo" size="45" onchange="$('#btnEnviar').click()" /></label>
+        <br />
+        <progress value="0" max="100"></progress><span id="porcentagem">0%</span>
+        <br />
+        <input type="button" id="btnEnviar" value="Enviar Arquivo" class="hide" />
+		<br>
+	    <div id="resposta">
+        </div>
+	</form>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn" data-dismiss="modal" style="color:#000 !important">Fechar</a>
+		<a href="#" class="btn btn-success" onClick="insere_feed()">Torcer</a>
+	</div>
+</div>
