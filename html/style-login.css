@@ -59,7 +59,7 @@ h2{
 #wrapper{
 	width: auto;
 	height: 100%;
-	position: absolute;	
+	position: relative;	
 	text-align: left;
 }
 
@@ -148,8 +148,8 @@ h2{
 	width:350px;
 	height: 100	px;
 	float: left;
-	left:430px;
-	position: absolute;
+	left:100px;
+	position: relative;
 	margin-top: 0px; 
 	background-color: #fff;
 	color:#7e9c2f;

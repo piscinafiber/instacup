@@ -33,7 +33,7 @@ $msg = "Falha ao cadastrar jogo.";
 			
 			$( document ).ready( function(){
 				
-				$( "#cabecalho" ).load( "cabecalho.html" );
+				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
 			$(document).ready(function(){	

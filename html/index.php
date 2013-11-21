@@ -18,7 +18,7 @@ Session_Start();
 			
 			$( document ).ready( function(){
 				
-				$( "#cabecalho" ).load( "cabecalho.html" );
+				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 
 				$('#btnEnviar').click(function(){

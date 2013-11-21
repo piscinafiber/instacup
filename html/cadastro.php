@@ -1,6 +1,6 @@
 <?php
-	mysql_connect("localhost", "tipboxar_arena", "@123xyz@");
-mysql_select_db("tipboxar_instacup");
+	include("banco.php");
+	$bd = new Banco();
 	include("classUsuario.php");
 	
 /*	if(isset($_POST['acao']))
@@ -56,7 +56,7 @@ mysql_select_db("tipboxar_instacup");
 	<body background="../imagens/campo.jpg"> 
 	<div id="header">
 		<DIV><center><br><br>						
-			<STYLE="color:#fff; font-size:25px;">InstaCup - Uma rede de <b>VENCEDORES!</b></STYLE>
+			<div="color:#fff; font-size:25px;">InstaCup - Uma rede de <b>VENCEDORES!</b></div>
 		</div>
 	</div>
 		<div id="wrapper">

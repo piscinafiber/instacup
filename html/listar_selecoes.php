@@ -12,7 +12,7 @@
 			
 			$( document ).ready( function(){
 				
-				$( "#cabecalho" ).load( "cabecalho.html" );
+				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
 			$(function(){
@@ -40,8 +40,8 @@
 			 <td>
 			 
 				<?php
-				mysql_connect("localhost", "tipboxar_arena", "@123xyz@");
-				mysql_select_db("tipboxar_instacup");
+				include("banco.php");
+				$bd = new Banco();
 				$sql2= "select codigo, foto, fototime, nome from selecao";	
 				$resultado2 = mysql_query($sql2);
 				echo "<tr height='10px'/>";

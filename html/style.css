@@ -175,7 +175,7 @@ height: 30px;
 #wrapper{
 	width: 80%;
 	margin:  auto;
-	height: 580px;
+	height: 94%;
 	text-align: left;
 	color:#00923F;
 	background-color: #f1f6e3;
@@ -208,14 +208,22 @@ height: 30px;
 	font-family: arial;
 	color:#00923F;
 }
+
+#cabecalho{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
 #content{
 	width: 835px;
-	height: 580px;
+	height: 93%;
 	float:left;
 	position: absolute;
 	background-color: #fff;
 	text-align: justify;
-	margin-top: -580px;
+	top: 47px;
+	/*margin-top: -580px;*/
 	margin-left:25%;
 	margin-right:30%;
 	border-bottom-right-radius: 15px;
@@ -895,7 +903,7 @@ background-color: #cdcdcd;
 	z-index:3;
 }
 #formulario-index{
-	width: 830px;
+	width: 815px;
 	height: 80px;
 	margin-top:0px;
 	float:center;

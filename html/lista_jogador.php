@@ -13,7 +13,7 @@
 			
 			$( document ).ready( function(){
 				
-				$( "#cabecalho" ).load( "cabecalho.html" );
+				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
 		
@@ -29,8 +29,8 @@
 			
 			<TABLE width ="370px" height="300px" style="border:none; color:#B2C482; background-color:#B2C482; margin-left:110px; ">				
 				<?php
-				mysql_connect("localhost", "tipboxar_arena", "@123xyz@");
-				mysql_select_db("tipboxar_instacup");
+				include("banco.php");
+				$bd = new Banco();
 				$sql= "select * from jogador where codigo_selecao=".$_GET['selecao'];
 				$resultado = mysql_query($sql);
 				$sql2= "select * from selecao where codigo=".$_GET['selecao'];	
