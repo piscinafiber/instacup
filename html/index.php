@@ -31,11 +31,15 @@ Session_Start();
 							$('progress').attr('value','100');
 							$('#porcentagem').html('100%');
 							if (data.status == 'ok') {
-								$("#formUpload").find('input[name=base64_foto]').val(data.img);
-								$("#formUpload").find('input[name=base64_tipo]').val(data.type);
+								$('input[name=base64_foto]').val(data.img);
+								$('input[name=base64_tipo]').val(data.type);
+								$("#resposta").show();
 								$("#resposta").css('background','url(data:'+data.type+';base64,'+data.img+')');
+								$("#resposta").css('background-repeat','no-repeat');
+								$("#resposta").css('margin-left','180px');
 								$("#resposta").css('width','400px');
 								$("#resposta").css('height',data.height);
+								$("#excluir_img").show();
 								$('#porcentagem').hide();
 								$('progress').hide();
 								var comment = document.formtorcer.comentario.value; 
@@ -51,11 +55,14 @@ Session_Start();
 						resetForm: true
 					}).submit();
 				});
-
-				$('#myModal').modal('hidden',function(){
-					$("#resposta").removeAttr('style');
+				
+				$("#excluir_img").click(function(event){
+					event.preventDefault();
+					$("#resposta").hide();
+					$("#resposta").css('background','none');
+					$('input[name=base64_foto]').val('');
+					$('input[name=base64_tipo]').val('');
 				})
-
 
 			});
 				$(document).ready(function()
@@ -92,8 +99,8 @@ Session_Start();
 				usuario = document.formtorcer.cod_user.value;
 				selecao = document.formtorcer.cod_sel.value;
 				nome = document.formtorcer.nome.value;
-				foto = document.formUpload.base64_foto.value;
-				tipo = document.formUpload.base64_tipo.value;
+				foto = document.formtorcer.base64_foto.value;
+				tipo = document.formtorcer.base64_tipo.value;
 				var_post = "comentario="+comment+"&data_feed="+data_comment+"&codigo_usuario="+usuario+"&selecao_usuario="+selecao+"&nome_usuario="+nome+"&foto="+foto+"&tipo="+tipo;
 				xmlhttp.send(var_post);
 				
@@ -104,6 +111,10 @@ Session_Start();
 						lista_feeds();
 						document.formtorcer.comentario.value="";
 						document.formtorcer.countdown.value=75;
+						$("#resposta").hide();
+						$("#resposta").css('background','none');
+						$('input[name=base64_foto]').val('');
+						$('input[name=base64_tipo]').val('');
 					}
 				}
 		}
@@ -132,20 +143,15 @@ Session_Start();
 				}
 		}
 
-
-		function modalUpload(event) {
+		function initDivUpload(event) {
 			event.preventDefault();
-			var comment = document.formtorcer.comentario.value; 
-			$("#formUpload").find('textarea').val(comment);
-			$("#modal").modal('show');
 			$("#arquivo").click();
 			$('#porcentagem').show();
 			$('progress').show();
 			$('progress').attr('value','0');
 			$('#porcentagem').html('0%');
+			// $("#")
 
-
-			// alert('modal - ' +  comment );
 		}
 
 	  </script>
@@ -174,12 +180,24 @@ Session_Start();
 				<textarea name="comentario" id="comentario" style="resize:none; border-color:#7e9c2f" onKeyDown="limitText(this.form.comentario,this.form.countdown,75);" 
 				onKeyUp="limitText(this.form.comentario,this.form.countdown,75);" ></textarea><br>
 				
-				<input readonly type="text" name="countdown" size="1" value="75" style="resize:none; border:none;color:#7e9c2f; background-color:#f1f6e3;">caracteres restantes.<input type="button" name="acao" value="Torcer" onClick="insere_feed()" id="btn-torcer" class="btn btn-success" style=""/><a href="#" onclick="modalUpload(event)"><img src="./img/camera-icon.png" alt="Enviar imagem" width="28" id="btn-photo" style=""></a><br>
+				<input readonly type="text" name="countdown" size="1" value="75" style="resize:none; border:none;color:#7e9c2f; background-color:#f1f6e3;">caracteres restantes.
+
+				<progress style="display:none" value="0" max="100"></progress><span id="porcentagem" style="display:none">0%</span>
+				
+				<input type="hidden" name="base64_foto" size="1" />
+				<input type="hidden" name="base64_tipo" size="1" />
+				
+				<div id="resposta" style="display:none;"><button style="display:none; color:#f00 !important; font-size:35px" id="excluir_img" class="close">&times;</button></div>
+				
+
+				<input type="button" name="acao" value="Torcer" onClick="insere_feed()" id="btn-torcer" class="btn btn-success" style=""/>
+				<a href="#" onclick="initDivUpload(event)"><img src="./img/camera-icon.png" alt="Enviar imagem" width="28" id="btn-photo" style=""></a><br>
 				</div>
 				<br>
 			</form>
 			</div>
-			<div id="feed" style="margin-top:10px; overflow:auto;" ></div><br>
+			<br>
+			<div id="feed" style="margin-top:10px; overflow:auto; position:relative; float:left" ></div><br>
 		
 	</div>
 	<script>
@@ -187,34 +205,11 @@ Session_Start();
 	</script>
 </body>
 </html>
-<div id="modal" class="modal hide fade">
-	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<h3>Foto</h3>
-	</div>
-	<div class="modal-body">
+<div class="hide">
 	<form name="formUpload" id="formUpload" method="post">
-    	<textarea name="comentario" id="comentario" style="resize:none; border-color:#7e9c2f" onKeyDown="limitText(this.form.comentario,this.form.countdown_modal,75);" 
-				onKeyUp="limitText(this.form.comentario,this.form.countdown_modal,75);" ></textarea>
+		<label class="hide">Selecione o arquivo: <input type="file" name="arquivo" id="arquivo" size="45" onchange="$('#btnEnviar').click()" /></label>
+		<br />
+		<input type="button" id="btnEnviar" value="Enviar Arquivo" class="hide" />
 		<br>
-		<input readonly type="text" name="countdown_modal" size="1" value="75" style="resize:none; border:none;color:#7e9c2f; background-color:#f1f6e3;">caracteres restantes.
-		<input type="hidden" name="base64_foto" size="1" />
-		<input type="hidden" name="base64_tipo" size="1" />
-		<br>
-		<br>
-
-	    <label class="hide">Selecione o arquivo: <input type="file" name="arquivo" id="arquivo" size="45" onchange="$('#btnEnviar').click()" /></label>
-        <br />
-        <progress value="0" max="100"></progress><span id="porcentagem">0%</span>
-        <br />
-        <input type="button" id="btnEnviar" value="Enviar Arquivo" class="hide" />
-		<br>
-	    <div id="resposta">
-        </div>
 	</form>
-	</div>
-	<div class="modal-footer">
-		<a href="#" class="btn" data-dismiss="modal" style="color:#000 !important">Fechar</a>
-		<a href="#" class="btn btn-success" onClick="insere_feed()">Torcer</a>
-	</div>
 </div>
