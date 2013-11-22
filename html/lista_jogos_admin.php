@@ -1,6 +1,6 @@
 ﻿<?php
-mysql_connect("localhost", "tipboxar_arena", "@123xyz@");
-mysql_select_db("tipboxar_instacup");
+	include("banco.php");
+	$bd = new Banco();
 include("classJogos.php");
 $jogos = new Jogos();
 ?>
@@ -16,6 +16,12 @@ $jogos = new Jogos();
 		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/easySlider1.7.js"></script>
+		<style type="text/css">
+		form div{
+			position: relative;
+			float: left;
+		}
+		</style>
 		<title>Instacup - ADM</title>
         <script type="text/javascript">
 			
@@ -30,6 +36,26 @@ $jogos = new Jogos();
 				continuous: true
 			});
 		});	
+
+		function atualiza_placar(codigo, that)
+		{	
+			console.log(codigo);
+			
+			console.info();
+			console.info();
+				$.ajax({
+					url : 'updateGolJogos.php',
+					type: 'POST',
+					data : ({
+						codigo : codigo,
+						gol_time1 : $(that).parents('tr:first').find('input[name=gol_time1]').val(),
+						gol_time2 : $(that).parents('tr:first').find('input[name=gol_time2]').val()
+					}),
+					success: function (response){
+						alert(response);
+					}
+				})
+		}
 		
         </script>
 	</head>
@@ -58,27 +84,23 @@ $jogos = new Jogos();
 $count=1;
 
 $resultado = $jogos->executaLista();
-
+echo "<table border='1' style='margin-top:20px; margin-left:10px'>";
+	
 while($dados=mysql_fetch_assoc($resultado))
 {
-	echo "<form name='form".$count."' method='post' action ='salva_gol.php?count=".$count.">";
-	echo "<table border='1'>";
 	echo "<tr>";
-	echo "<td>".$dados['codigo']."</td>";
-	echo "<td>".$dados['estadio']."</td>";
-	echo "<td>".$dados['local']."</td>";
-	echo "<td>".$dados['data']."</td>";
-	echo "<td>".$dados['hora']."</td>";
-	echo "<td>".$dados['time1']."</td>";
-	echo "<td>".$dados['time2']."</td>";
-	echo "<td><input type='text' name='gol_time1[".$count."]' value='".$dados['gol_time1']."'></td>";
-	echo "<td><input type='text' name='gol_time2[".$count."]' value='".$dados['gol_time2']."'></td>";
-	echo "<td><input type='submit' name='acao' value='Salva resultado'></td>";
+	echo "<td>".$dados['selecao1_nome']."</td>";
+	echo "<td>&nbsp;&nbsp; X &nbsp;&nbsp;</td>";
+	echo "<td>".$dados['selecao2_nome']."</td>";
+	echo "<td>&nbsp;".date("d/m/Y", strtotime($dados['data']))."</td>";
+	echo "<td> &nbsp;".$dados['hora']."&nbsp;&nbsp;</td>";
+	echo "<td><input type='text' name='gol_time1' value='".$dados['gol_time1']."'></td>";
+	echo "<td><input type='text' name='gol_time2' value='".$dados['gol_time2']."'></td>";
+	echo "<td><input type='button' name='acao' onClick='atualiza_placar(".$dados['codigo'].",this)' value='Salva resultado'></td>";
 	echo "</tr>";
-	echo '</table>';
-	echo "</form>";
 	$count++;
 }
+	echo "</table>";
 ?>
 </div>
 	

@@ -39,7 +39,7 @@
 			<div id="sidebar">
 				<ul>
 						<li><a href="lista_partida.php" style="text-decoration:none; color:#fff"><img src="../icones/apito.png" height= "25px" style="margin-top:0px; border:1px solid;"/><div style="margin-left:60px; margin-top:-23px;"><h2>Partidas</h2></div></a></li>
-						<li><a href="tabela.html" style="text-decoration:none; color:#fff"><img src="../icones/tabela.png" height= "25px" style="margin-top:0px;border:1px solid;"/><div style="margin-left:60px; margin-top:-23px;"><h2>Tabela</h2></div></a></li>
+						<li><a href="tabela.php" style="text-decoration:none; color:#fff"><img src="../icones/tabela.png" height= "25px" style="margin-top:0px;border:1px solid;"/><div style="margin-left:60px; margin-top:-23px;"><h2>Tabela</h2></div></a></li>
 						<li><a href="campeoes.html" style="text-decoration:none; color:#fff"><img src="../icones/campeoes.png" height= "25px" style="margin-top:0px;border:1px solid;"/><div style="margin-left:60px; margin-top:-23px;"><h2>Campeões</h2></div></a></li>
 						<li><a href="sobre.html" style="text-decoration:none; color:#fff"><img src="../icones/sobre.png" height= "25px" style="margin-top:0px;border:1px solid;"/><div style="margin-left:60px; margin-top:-23px;"><h2>Sobre</h2></div></a></li>
 				</ul>

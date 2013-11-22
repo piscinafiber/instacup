@@ -1,7 +1,7 @@
 <?php Session_Start(); ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-		 <meta charset="utf-8" />
+		<meta charset="ISO-8859-1" />
 		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
 		<link rel="stylesheet" href="./css/liquid-slider.css">
 		<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
@@ -41,13 +41,13 @@
 				while ($obj = mysql_fetch_array($resultado))
 				{
 					echo "<tr height='5px'></tr>";	
-					echo "<a href='perfil_jogador.php?cod=".$obj['codigo']."' style='nomejogador'><tr height='20px'>";			
+					echo "<a href='perfil_jogador.php?cod=".$obj['codigo']."&codigo_selecao=".$_GET['selecao']."' style='nomejogador'><tr height='20px'>";			
 						echo "<td width = '40px'></td>";						
 						echo "<td width = '20px' ><div style='margin-top:10px'><img src=".$obj2['foto']." height='25px' /></div></a></td>";
 						echo "<td width = '30px'  ><div style='background-color:#7e9c2f;'></div></td>";
-						echo "<td width = '170px' ><a href='perfil_jogador.php?cod=".$obj['codigo']."' style='nomejogador'><div style='padding-bottom:5px;'>".$obj['nome']."</div></a></td>";
-						echo "<td width = '50px'><a href='perfil_jogador.php?cod=".$obj['codigo']."' style='nomejogador'>".$obj['idade']."</a></td>";
-						echo "<td width = '40px'><a href='perfil_jogador.php?cod=".$obj['codigo']."' style='nomejogador'>".$obj['posicao']."</a></td>";
+						echo "<td width = '170px' ><a href='perfil_jogador.php?cod=".$obj['codigo']."&codigo_selecao=".$_GET['selecao']."' style='nomejogador'><div style='padding-bottom:5px;'>".$obj['nome']."</div></a></td>";
+						echo "<td width = '50px'><a href='perfil_jogador.php?cod=".$obj['codigo']."&codigo_selecao=".$_GET['selecao']."' style='nomejogador'>".$obj['idade']."</a></td>";
+						echo "<td width = '40px'><a href='perfil_jogador.php?cod=".$obj['codigo']."&codigo_selecao=".$_GET['selecao']."' style='nomejogador'>".$obj['posicao']."</a></td>";
 						echo "<td width = '30px'></td>";						
 					echo "</tr>";
 					echo "<tr height='0px'>";	

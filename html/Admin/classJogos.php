@@ -52,7 +52,10 @@ return $resultado;
 }
 
 public function executaLista(){
-$sql = "SELECT * FROM jogos";
+$sql = "SELECT jogos.*, selecao1.nome selecao1_nome, selecao2.nome selecao2_nome FROM jogos ";
+$sql .= 'JOIN selecao selecao1 on selecao.codigo = jogos.time1 ';
+$sql .= 'JOIN selecao selecao2 on selecao.codigo = jogos.time2 ';
+
 $this->resource = mysql_query($sql);
 
 return $this->resource;
