@@ -1,10 +1,14 @@
 <?php 
 	class resizeImage{
-		public function resize($arquivo, $tipo) {
+		public function resize($arquivo, $tipo, $newwidth, $newheight) {
 			list($width,$height)=getimagesize($arquivo);
-
-			$newwidth=400;
-			$newheight=($height/$width)*$newwidth;
+			if(empty($newwidth)) {
+				$newwidth=400;	
+			}
+			if (empty($newheight)) {
+				$newheight=($height/$width)*$newwidth;
+			}
+			
 			$tmp=imagecreatetruecolor($newwidth,$newheight);
 
 			if ( $tipo == 'image/png' ) {

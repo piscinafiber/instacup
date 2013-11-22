@@ -9,6 +9,7 @@ public $sexo;
 public $codigo_user;
 public $nome;
 public $foto;
+public $type_avatar;
 public $email;
 public $senha;
 public $status;
@@ -17,13 +18,13 @@ public $nivel;
 public $dados;
 public $resource;
 
-public function __construct($c="",$l="", $sf="", $s="", $no="",$fo="", $e="", $sen="",$sta="",$n="")
+public function __construct($c="",$l="", $sf="", $s="", $no="",$fo="",$tyfo="", $e="", $sen="",$sta="",$n="")
 {
 	if($c != "" && $l == "" && $sf == "" && $s == "" && $no == "" && $fo == "" && $e == "" && $sen == "" && $sta == "" && $n == "")
 {
 	$sql = "SELECT * FROM usuario WHERE codigo='$c'";
 	$resultado = mysql_query($sql);
-	list($this->codigo,$this->login,$this->selecaof,$this->sexo,$this->nome,$this->foto,$this->email,$this->senha,$this->status,$this->nivel)=mysql_fetch_row($resultado);
+	list($this->codigo,$this->login,$this->selecaof,$this->sexo,$this->nome,$this->foto,$this->type_avatar,$this->email,$this->senha,$this->status,$this->nivel)=mysql_fetch_row($resultado);
 }
 else
 {
@@ -33,6 +34,7 @@ $this->selecaof = $sf;
 $this->sexo = $s;
 $this->nome = $no;
 $this->foto=$fo;
+$this->type_avatar=$tyfo;
 $this->email = $e;
 $this->senha = $sen;
 $this->status=$sta;
@@ -41,8 +43,8 @@ $this->nivel=$n;
 }
 
 public function insere(){
-$sql = "INSERT INTO usuario(login, selecao_favorita, sexo, nome,avatar, email, senha,comentario,nivel_acesso) 
-		VALUES ('".$this->login."','".$this->selecaof."','".$this->sexo."','".$this->nome."','".$this->foto."','".$this->email."','".$this->senha."','".$this->status."','1')";
+$sql = "INSERT INTO usuario(login, selecao_favorita, sexo, nome,avatar, type_avatar, email, senha,comentario,nivel_acesso) 
+		VALUES ('".$this->login."','".$this->selecaof."','".$this->sexo."','".$this->nome."','".$this->foto."','".$this->type_avatar."','".$this->email."','".$this->senha."','".$this->status."','1')";
 $resultado = mysql_query($sql);
 return $resultado;
 }

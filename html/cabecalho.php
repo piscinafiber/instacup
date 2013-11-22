@@ -27,15 +27,14 @@
 	</table>
 	</div>
 	
-	
 	</div>					 						
 	<div id="wrapper">
-		<div id='texto'><b><?php echo $_SESSION['UsuarioNome']; ?></b></div>
 		<div id="foto">
 			<a href="Perfil_usuario.html">
-				<img src="<?php echo $_SESSION['UsuarioAvatar']; ?>" width="100px" height="100px" style="border-top-right-radius: 25px; border-bottom-left-radius: 25px;  margin-top:0px"/>
+				<img src="renderizaAvatar.php?id=<?php echo $_SESSION['UsuarioCodigo'] ?>" width="100px" height="100px" style="border-top-right-radius: 25px; border-bottom-left-radius: 25px;  margin-top:0px"/>
 			</a> 
 		</div>
+		<div id='texto'><b><?php echo $_SESSION['UsuarioNome']; ?></b></div>
 		<div id="botoes">
 			<div id="sidebar">
 				<ul>

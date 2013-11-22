@@ -13,6 +13,6 @@ fclose($fp);
 
 // $tipos = array('jpg', 'png', 'gif', 'bmp');
 $objResize = new resizeImage();
-$conteudo = $objResize->resize($arquivo,$tipo, NULL, NULL);
+$conteudo = $objResize->resize($arquivo,$tipo,100,100);
 $data_retorno = array('status'=>'ok','img'=>base64_encode($conteudo['img']),'type'=>"$tipo",'height'=>$conteudo['height']);
 echo json_encode($data_retorno);

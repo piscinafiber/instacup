@@ -58,7 +58,7 @@ h2{
 
 #wrapper{
 	width: auto;
-	height: 100%;
+	height: 80%;
 	position: relative;	
 	text-align: left;
 }
@@ -70,7 +70,7 @@ h2{
 	text-align: left;
 	background-color: #458B00;
 	color:#fff;
-	bottom:-500px;
+	/*bottom:-500px;*/
 	border-top:3px solid;
 	border-top-color:#66CD00;
 	border-bottom: 3px solid;
@@ -99,9 +99,9 @@ h2{
 
 #footer{
 	bottom: 0px;
-	width: 110%;
+	width: 100%;
 	height: 60px;
-	position: relative;
+	position: absolute;
 	float: right;
 	background-color: #444;
 	color:#fff;
@@ -119,10 +119,13 @@ h2{
 }
 
 #cadastro2{	
-	height: 480px;
+	/*height: 100%;*/
 	width:550px;
-	position: center;
-	margin-top:-100px;
+	position: relative;
+	float: left;
+	left: 50%;
+	margin-left: -275px;
+	/*margin-top:-100px;*/
 	background-color: #fff;
 	color:#000;
 	border-radius: 15px;
@@ -136,11 +139,11 @@ h2{
 
 
 #logo{
-	width:100px;
+	width:150px;
 	height: 100	px;
 	float: left;
-	left:250px;
-	position: absolute;
+	left:200px;
+	position: relative;
 	margin-top: 10px; 
 	background-color: #fff;	
 }
@@ -148,9 +151,9 @@ h2{
 	width:350px;
 	height: 100	px;
 	float: left;
-	left:100px;
+	left:-50px;
 	position: relative;
-	margin-top: 0px; 
+	margin-top: 150px; 
 	background-color: #fff;
 	color:#7e9c2f;
 	border-color:#7e9c2f;

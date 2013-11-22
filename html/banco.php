@@ -20,7 +20,7 @@ $this->database = "tipboxar_instacup";
 if(mysql_connect($this->host, $this->user, $this->password))
 {
 if(mysql_select_db($this->database))
-$this->status = false;
+$this->status = true;
 else
 $this->status = false;
 }

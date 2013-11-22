@@ -37,7 +37,10 @@ Session_Start();
 								$("#resposta").css('background','url(data:'+data.type+';base64,'+data.img+')');
 								$("#resposta").css('background-repeat','no-repeat');
 								$("#resposta").css('margin-left','180px');
-								$("#resposta").css('width','400px');
+								$("#resposta").css('position','relative');
+								$("#resposta").css('float','left');
+								$("#resposta").css('margin-bottom','10px');
+								$("#resposta").css('width','600px');
 								$("#resposta").css('height',data.height);
 								$("#excluir_img").show();
 								$('#porcentagem').hide();
@@ -63,6 +66,10 @@ Session_Start();
 					$('input[name=base64_foto]').val('');
 					$('input[name=base64_tipo]').val('');
 				})
+
+				window.setInterval(function(){
+					lista_feeds();
+				},5000);
 
 			});
 				$(document).ready(function()
@@ -176,28 +183,29 @@ Session_Start();
 				<input type="hidden" name="cod_user" value="<? echo $_SESSION['UsuarioCodigo']; ?>">
 				<input type="hidden" name="cod_sel" value="<? echo $_SESSION['UsuarioSelecao']; ?>">
 				<input type="hidden" name="nome" value="<? echo $_SESSION['UsuarioNome']; ?>">
-				<div style="width:90%; height:45px;margin-left:4%; padding-top:10px;">				
-				<textarea name="comentario" id="comentario" style="resize:none; border-color:#7e9c2f" onKeyDown="limitText(this.form.comentario,this.form.countdown,75);" 
+				<div style="width:92%; height:45px;margin-left:4%; padding-top:10px;">				
+				<textarea name="comentario" id="comentario" style="resize:none; border-color:#7e9c2f; margin-bottom:3px" onKeyDown="limitText(this.form.comentario,this.form.countdown,75);" 
 				onKeyUp="limitText(this.form.comentario,this.form.countdown,75);" ></textarea><br>
 				
-				<input readonly type="text" name="countdown" size="1" value="75" style="resize:none; border:none;color:#7e9c2f; background-color:#f1f6e3;">caracteres restantes.
+				<input readonly type="text" name="countdown" size="1" value="75" style="resize:none; border:none;color:#7e9c2f;">caracteres restantes.
 
 				<progress style="display:none" value="0" max="100"></progress><span id="porcentagem" style="display:none">0%</span>
 				
 				<input type="hidden" name="base64_foto" size="1" />
 				<input type="hidden" name="base64_tipo" size="1" />
 				
-				<div id="resposta" style="display:none;"><button style="display:none; color:#f00 !important; font-size:35px" id="excluir_img" class="close">&times;</button></div>
+				<div id="resposta" style="display:none;"><button style="display:none; color:#f00 !important; font-size:35px; margin-left:375px; float:left; position:relative" id="excluir_img" class="close">&times;</button></div>
 				
-
-				<input type="button" name="acao" value="Torcer" onClick="insere_feed()" id="btn-torcer" class="btn btn-success" style=""/>
-				<a href="#" onclick="initDivUpload(event)"><img src="./img/camera-icon.png" alt="Enviar imagem" width="28" id="btn-photo" style=""></a><br>
+				<button type="button" name="acao" onClick="insere_feed()" id="btn-torcer" class="btn btn-success" style=""><i class="icon-thumbs-up icon-white"></i> Torcer</button>
+				<button type="button" onclick="initDivUpload(event)" id="btn-photo" class="btn btn-warning">&nbsp;<i class="icon-camera icon-white"></i>&nbsp;Lance</button>
+				<!-- <a href="#" onclick="initDivUpload(event)"><img src="./img/camera-icon.png" alt="Enviar imagem" width="28" id="btn-photo" style=""></a> -->
+				<br>
 				</div>
 				<br>
 			</form>
 			</div>
-			<br>
-			<div id="feed" style="margin-top:10px; overflow:auto; position:relative; float:left" ></div><br>
+
+			<div id="feed" style=" overflow:auto; position:relative; float:left" ></div><br>
 		
 	</div>
 	<script>

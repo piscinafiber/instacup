@@ -188,10 +188,9 @@ height: 30px;
 #foto{
 	width:100px;
 	height: 100px;
-	float: left;
-	margin-left:-115px;
+	margin-left:80px;
 	position: relative;
-	margin-top: 20px; 
+	margin-top: 50px; 
 	color: #000;
 	border-top-right-radius: 25px;
 	border-bottom-left-radius: 25px;
@@ -200,10 +199,10 @@ height: 30px;
 #texto{
 	width:10%;
 	height: 3%;
-	float: left;
-	margin-left:60px;
+	margin-left:80px;
 	position: relative;
-	margin-top: 190px; 
+	float: left;
+	margin-top: 10px; 
 	background-color: none;	
 	font-family: arial;
 	color:#00923F;
@@ -223,7 +222,6 @@ height: 30px;
 	background-color: #fff;
 	text-align: justify;
 	top: 47px;
-	/*margin-top: -580px;*/
 	margin-left:25%;
 	margin-right:30%;
 	border-bottom-right-radius: 15px;
@@ -265,7 +263,8 @@ width:100%;
 	background-color: none;
 	color:#000;
 	border:1px;
-	margin-top: 220px;
+	margin-top: 60px;
+	margin-left: 10px;
 	bottom:5px;
 }
 #logo {	
@@ -302,12 +301,13 @@ p{padding:6px;}
 }
 
 #menucima{
-	width: 570px;
+	width: 350px;
 	height: 25px;
 	position: relative;
-	left:400px;
+	left:50%;
 	text-align:center;
-	margin-top: -27px; 
+	margin-top: -27px;
+	margin-left: -175px; 
 	bottom:5px;
 	background-color: #none;	
 	font-family: Verdana;
@@ -888,17 +888,16 @@ background-color: #cdcdcd;
 	z-index:3;
 }
 #formulario-index{
-	width: 815px;
-	height: 80px;
+	width: 818px;
+	/*height: 100%;*/
 	margin-top:0px;
 	float:center;
 	position:center;
 	z-index:4;
 	color:#7e9c2f;
 	font-size:10px;
-	background-color:#f1f6e3;
-	border-bottom:2px solid;
-	border-left:2px solid;
+	/*background-color:#f1f6e3;*/
+	/*border-bottom:2px solid;*/
 	border-color:#fff;
 }
 #comentario{

@@ -38,54 +38,47 @@ $jogos = new Jogos();
         <div id="cabecalho"></div>
 		<div id="content">
 		<?php
-if(isset($_POST['acao'])){
-$cod = $_POST['cod'];
-$sucesso = 0;
-foreach($cod AS $valor){
-if($jogos->exclui($valor))
-$sucesso++;
-}
-if($sucesso > 0)
-echo "$sucesso Jogo(s) excluido(s) com sucesso!";
-else
-echo "Falha ao excluir.";
-}
+
+
+
+
+// <tr>
+// <th>Código</th>
+// <th>Estadio</th>
+// <th>Local</th>
+// <th>Data</th>
+// <th>Hora</th>
+// <th>Time 1</th>
+// <th>Time 2</th>
+// <th>Gols time 1</th>
+// <th>Gols time 2</th>
+// <th></th>
+// </tr>";
+
+$count=1;
 
 $resultado = $jogos->executaLista();
-echo '<form method="post" action ="listaJogos.php"">
-<table border="1">
-<tr>
-<th></th>
-<th>Código</th>
-<th>Estadio</th>
-<th>Local</th>
-<th>Data</th>
-<th>Hora</th>
-<th>Time 1</th>
-<th>Time 2</th>
-<th>Gols time 1</th>
-<th>Gols time 2</th>
-<th></th>
-</tr>';
 
-while($dados = $jogos->listaDados()){
-echo '<tr>';
-echo '<td><input type="checkbox" name="cod[]" value="'.$dados['codigo'].'">';
-echo '<td>'.$dados['codigo'].'</td>';
-echo '<td>'.$dados['estadio'].'</td>';
-echo '<td>'.$dados['local'].'</td>';
-echo '<td>'.$dados['data'].'</td>';
-echo '<td>'.$dados['hora'].'</td>';
-echo '<td>'.$dados['time1'].'</td>';
-echo '<td>'.$dados['time2'].'</td>';
-echo '<td>'.$dados['gol_time1'].'</td>';
-echo '<td>'.$dados['gol_time2'].'</td>';
-echo '<td><a href="edita_jogo_admin.php?cod='.$dados['codigo'].'">EDITAR</a></td>';
-echo '</tr>';
+while($dados=mysql_fetch_assoc($resultado))
+{
+	echo "<form name='form".$count."' method='post' action ='salva_gol.php?count=".$count.">";
+	echo "<table border='1'>";
+	echo "<tr>";
+	echo "<td>".$dados['codigo']."</td>";
+	echo "<td>".$dados['estadio']."</td>";
+	echo "<td>".$dados['local']."</td>";
+	echo "<td>".$dados['data']."</td>";
+	echo "<td>".$dados['hora']."</td>";
+	echo "<td>".$dados['time1']."</td>";
+	echo "<td>".$dados['time2']."</td>";
+	echo "<td><input type='text' name='gol_time1[".$count."]' value='".$dados['gol_time1']."'></td>";
+	echo "<td><input type='text' name='gol_time2[".$count."]' value='".$dados['gol_time2']."'></td>";
+	echo "<td><input type='submit' name='acao' value='Salva resultado'></td>";
+	echo "</tr>";
+	echo '</table>';
+	echo "</form>";
+	$count++;
 }
-echo '</form>';
-echo '</table>';
-echo '<br><input type="submit" name="acao" value="Excluir">';
 ?>
 </div>
 	
