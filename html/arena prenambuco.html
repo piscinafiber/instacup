@@ -2,30 +2,23 @@
 <head>
 		 <meta charset="utf-8" />
 		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
-		<link rel="stylesheet" href="./css/liquid-slider.css">
 		<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+		<!--<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />-->
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/easySlider1.7.js"></script>
 		<title>Instacup - Maracana</title>
-        <script type="text/javascript">
+          <script type="text/javascript">
 			
 			$( document ).ready( function(){
 				
 				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
-			$(document).ready(function(){	
-			$("#slider").easySlider({
-				auto: true, 
-				continuous: true
-			});
-		});	
 		
         </script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	</head>
 <body background="../../../imagens/campo.jpg" > 
 
@@ -33,17 +26,17 @@
 		<div id="content"><center>
 			 <div id="Titulo" ><center><h1>Arena Pernanbuco</h1></div>
 			 <div id="abaixoTitulo"></div>
-			<div id="fotosel">
-			<div id="slider" style="margin-left:-30px;">
-				<ul>				
-					<li><img src="../estadios/arenapernambuco.jpg" width="800px" style="margin-top:-80px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/arenapernambuco2.jpg" width="800px" style="margin-top:-140px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/arenapernambuco3.jpg" width="800px" style="margin-top:-60px;" alt="Css Template Preview" /></a></li>		
+			 <br/>
+			<div class="flexslider">
+				<ul class="slides">			    
+					<li><img src="../estadios/arenapernambuco.jpg" /></a></li>
+					<li><img src="../estadios/arenapernambuco2.jpg" /></a></li>
+					<li><img src="../estadios/arenapernambuco3.jpg" /></a></li>
 				</ul>
-			</div></div>			
-			<div id="textosel2"><p align = "Justify"><h2>A Arena Pernambuco est&aacute; localizada em  S&atilde;o Louren&ccedil;o da Mata, na zona metropolitana da cidade, a 19 km do Aeroporto Internacional dos Guararapes. Tem capacidade para 43.921 pessoas e vai acolher partidas do N&aacute;utico a partir de junho de 2013, depois de acordo fechado com o clube alvirrubo. O projeto, al&eacute;m de se tornar mais um ponto tusr&iacute;stico da cidade, &eacute; visto como uma alavanca econ&ocirc;mica para a expans&atilde;o da Grande Recife, regi&atilde;o em uma regi&atilde;o considerada carente para reuso.</div>
+			</div>	
+			<div style="margin-top: 20px;" id="textosel2"><p align = "Justify"><h2>A Arena Pernambuco est&aacute; localizada em  S&atilde;o Louren&ccedil;o da Mata, na zona metropolitana da cidade, a 19 km do Aeroporto Internacional dos Guararapes. Tem capacidade para 43.921 pessoas e vai acolher partidas do N&aacute;utico a partir de junho de 2013, depois de acordo fechado com o clube alvirrubo. O projeto, al&eacute;m de se tornar mais um ponto tusr&iacute;stico da cidade, &eacute; visto como uma alavanca econ&ocirc;mica para a expans&atilde;o da Grande Recife, regi&atilde;o em uma regi&atilde;o considerada carente para reuso.</div>
 			
-			<div id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.kydLUEv1Bky0" width="230" height="220"></iframe></iframe></div>
+			<div style="margin-top: 20px;" id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.kydLUEv1Bky0" width="230" height="220"></iframe></iframe></div>
 			</div> 
 			
 			
@@ -57,6 +50,17 @@
 				
 		</div>		
 	</div>
+	
+  		<link rel="stylesheet" type="text/css" href="./css/flexslider.css"/>
+ 		<script src="./js/jquery.flexslider-min.js"></script>    
+ 		<script type="text/javascript">
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+			    animation: "slide"
+			  });
+			});
+		
+        </script>
 	
 </body>
 </html>

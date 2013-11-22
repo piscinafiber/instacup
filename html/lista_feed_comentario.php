@@ -1,6 +1,7 @@
 <?php	
 	include("banco.php");
 	$bd = new Banco();	
+	if(isset($_POST['codigo']))
 	echo $_POST['codigo'];
 	$sql = "select comentario, data_feed from feed_jogo where codigo_jogo=3 order by data_feed desc";		
 	$resultado = mysql_query($sql);

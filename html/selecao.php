@@ -34,11 +34,11 @@
 				$resultado2 = mysql_query($sql2);
 				$obj2 = mysql_fetch_array($resultado2);
 				
-				echo "<div id='Titulo' ><center><h1>".$obj2['nome']."</h1></div>";
+				echo "<div id='Titulo' ><center><img src= ".$obj2['foto']." height='120px' /><br/><h1>".$obj2['nome']."</h1></div><br><br><br><br><br><br><br><br>";
 				echo "<div id='abaixoTitulo'></div> <br><br>";
-				echo "<div id='foto_selecao' style='margin-left:120px'><img src= ".$obj2['fototime']." width='350px' style='border-radius:5px; margin-left:-370px; margin-top:0px'' /></div><img src= ".$obj2['foto']." height='120px' style='border-radius:5px; margin-left:450px; margin-top:-160px'/>";			
+				echo "<div id='foto_selecao'><img src= ".$obj2['fototime']." width='350px' style='border-radius:5px; margin-top:0px'' /></div>";			
 				echo "<table>";
-				echo "<tr height='340px'><td colspan='12'><div id='texto_selecao'><p align = 'Justify'><h2>".$obj2['descricao'];
+				echo "<tr height='380px'><td colspan='12'><div id='texto_selecao'><p align = 'Justify'><h2>".utf8_encode($obj2['descricao'])."</tr>";
 				echo "<tr>";
 				echo "<center>";
 				$i=1;

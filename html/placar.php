@@ -72,18 +72,18 @@
 						while ($obj2 = mysql_fetch_array($resultado2))
 						{		
 							echo "<tr>";
-								echo "<td><div id='fotoplacar1'><p align = 'Justify'><img src=".$obj2['foto']."  height= '200px'/></A></div></td>";
+								echo "<td><div id='fotoplacar1'><p align = 'Justify'><img src=".$obj2['foto']."  height= '120px'/></A></div></td>";
 								echo "<td style='text-align:center; background-color:#none'><center><div id='textoplacar' style='margin-top:80px'><h1>".$obj['gol_time1']."x".$obj['gol_time2']."</h1></div></td>";
 						}
 						while ($obj3 = mysql_fetch_array($resultado3))
 						{					
-						echo "<td><div id='fotoplacar2'><p align = 'Justify'><img src=".$obj3['foto']." height= '200px'/></A></div></td>";
+						echo "<td><div id='fotoplacar2'><p align = 'Justify'><img src=".$obj3['foto']." height= '120px'/></A></div></td>";
 							echo "</tr>";	
 						}	
 						echo "</table> ";
 				?>
 				<div style="margin-top:10px;">
-				<div id="feed_comentario"  width="500px" height="300px" style="position:relative;  top:20px; width:100%; height:190; z-index:1; overflow: auto; margin-top:10px; overflow:auto; background-color:#fff;" >
+				<div id="feed_comentario"  width="500px" height="300px" style="position:relative;  top:20px; width:100%; height:280px; z-index:1; overflow: auto; margin-top:10px; overflow:auto; background-color:#fff;" >
 				
 				</div><br>
 		</div>	</div>

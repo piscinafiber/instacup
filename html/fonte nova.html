@@ -2,14 +2,12 @@
 <head>
 		 <meta charset="utf-8" />
 		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
-		<link rel="stylesheet" href="./css/liquid-slider.css">
 		<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+		<!--<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />-->
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/easySlider1.7.js"></script>
 		<title>Instacup - Fonte Nova</title>
         <script type="text/javascript">
 			
@@ -18,14 +16,9 @@
 				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
-			$(document).ready(function(){	
-			$("#slider").easySlider({
-				auto: true, 
-				continuous: true
-			});
-		});	
 		
         </script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	</head>
 <body background="../../../imagens/campo.jpg" > 
 
@@ -33,18 +26,18 @@
 		<div id="content"><center>
 			 <div id="Titulo" ><center><h1>Fonte Nova</h1></div>
 			 <div id="abaixoTitulo"></div>
-			<div id="fotosel">
-			<div id="slider" style="margin-left:-30px;">
-				<ul>				
-					<li><img src="../estadios/fonte-nova.jpg" width="800px" style="margin-top:-80px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/fonte-nova2.jpg" width="800px" style="margin-top:-140px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/fonte-nova3.jpg" width="800px" style="margin-top:-60px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/fonte-nova4.jpg" width="800px" style="margin-top:-60px;" alt="Css Template Preview" /></a></li>							
+			 <br/>
+			<div class="flexslider">
+				<ul class="slides">			    
+					<li><img src="../estadios/fonte-nova.jpg" /></a></li>
+					<li><img src="../estadios/fonte-nova2.jpg" /></a></li>
+					<li><img src="../estadios/fonte-nova3.jpg" /></a></li>
+					<li><img src="../estadios/fonte-nova4.jpg" /></a></li>
 				</ul>
-			</div></div>			
-			<div id="textosel2"><p align = "Justify"><h2>O Est&aacute;dio Fonte Nova, situado na primeira capital do Brasil, ap&oacute;s suas &uacute;ltimas reformas, conta com capacidade para 56.500 espectadores e ainda contirnua com as caracter&iacute;sticas originais, mas agora possui uma cobertura com estrutura met&aacute;lica leve, al&eacute;m de um restaurante panor&acirc;mico e um museu do futebol, servindo como um &oacute;timo ponto tur&iacute;stico. O complexo abriga muito mais do que partidas de jogos de futebol: pr&eacute;dios que comportar&atilde;o estacionamento, shopping, hot&eacute;is e uma casa de shows fazem parte do projeto, que segue um modelo de parceria p&uacute;blico-privada, aumentando a ecoomia do local.</div>
+			</div>	
+			<div style="margin-top: 20px;" id="textosel2"><p align = "Justify"><h2>O Est&aacute;dio Fonte Nova, situado na primeira capital do Brasil, ap&oacute;s suas &uacute;ltimas reformas, conta com capacidade para 56.500 espectadores e ainda contirnua com as caracter&iacute;sticas originais, mas agora possui uma cobertura com estrutura met&aacute;lica leve, al&eacute;m de um restaurante panor&acirc;mico e um museu do futebol, servindo como um &oacute;timo ponto tur&iacute;stico. O complexo abriga muito mais do que partidas de jogos de futebol: pr&eacute;dios que comportar&atilde;o estacionamento, shopping, hot&eacute;is e uma casa de shows fazem parte do projeto, que segue um modelo de parceria p&uacute;blico-privada, aumentando a ecoomia do local.</div>
 
-			<div id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.kttuV_ARB9P0" width="230" height="220"></iframe></div>
+			<div style="margin-top: 20px;" id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.kttuV_ARB9P0" width="230" height="220"></iframe></div>
 			
 			
 </div>			
@@ -58,6 +51,16 @@
 		</div>		
 	</div>
 	
+  		<link rel="stylesheet" type="text/css" href="./css/flexslider.css"/>
+ 		<script src="./js/jquery.flexslider-min.js"></script>    
+ 		<script type="text/javascript">
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+			    animation: "slide"
+			  });
+			});
+		
+        </script>
 </body>
 </html>
 

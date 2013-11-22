@@ -2,30 +2,23 @@
 <head>
 		 <meta charset="utf-8" />
 		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
-		<link rel="stylesheet" href="./css/liquid-slider.css">
 		<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+		<!--<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />-->
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/easySlider1.7.js"></script>
 		<title>Instacup - Mané Garrincha</title>
-        <script type="text/javascript">
+          <script type="text/javascript">
 			
 			$( document ).ready( function(){
 				
 				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
-			$(document).ready(function(){	
-			$("#slider").easySlider({
-				auto: true, 
-				continuous: true
-			});
-		});	
 		
         </script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	</head>
 <body background="../../../imagens/campo.jpg" > 
 
@@ -33,16 +26,16 @@
 		<div id="content"><center>
 			 <div id="Titulo" ><center><h1>Mané Garrincha</h1></div>
 			 <div id="abaixoTitulo"></div>
-			<div id="fotosel">
-			<div id="slider" style="margin-left:-30px;">
-				<ul>				
-					<li><img src="../estadios/mane-garrincha.jpg" width="800px" style="margin-top:-80px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/mane-garrincha2.jpg" width="800px" style="margin-top:-140px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/mane-garrincha1.jpg" width="800px" style="margin-top:-60px;" alt="Css Template Preview" /></a></li>		
+			 <br/>
+			<div class="flexslider">
+				<ul class="slides">			    
+					<li><img src="../estadios/mane-garrincha.jpg" /></a></li>
+					<li><img src="../estadios/mane-garrincha2.jpg" /></a></li>
+					<li><img src="../estadios/mane-garrincha3.jpg" /></a></li>
 				</ul>
-			</div></div>			
-		<div id="textosel2"><p align = "Justify"><h2>O Est&aacute;dio Nacional de Bras&iacute;lia Man&eacute; Garrincha, tamb&eacute;m conhecido como Est&aacute;dio Man&eacute; Garrincha, Est&aacute;dio Nacional de Bras&iacute;lia ou simplesmente Man&eacute; Garrincha, &eacute; um est&aacute;dio de futebol e arena multiuso brasileiro em reconstru&ccedil;&atilde;o na cidade de Bras&iacute;lia, no Distrito Federal. <br />Faz parte do Complexo Poliesportivo Ayrton Senna, que engloba tamb&eacute;m o Gin&aacute;sio Nilson Nelson e o Aut&oacute;dromo Internacional de Bras&iacute;lia Nelson Piquet. Atualmente, o est&aacute;dio est&aacute; em reformas, que v&atilde;o amplicar sua capacidade para mais de 71 mil torcedores. A obra ser&aacute; oficialmente inaugurada no dia 21 de abril de 2013. </div>
-			</h2><div id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.kKe2UZLIk7j4" width="350px" height="220"></iframe></div>
+			</div>			
+		<div style="margin-top: 20px;" id="textosel2"><p align = "Justify"><h2>O Est&aacute;dio Nacional de Bras&iacute;lia Man&eacute; Garrincha, tamb&eacute;m conhecido como Est&aacute;dio Man&eacute; Garrincha, Est&aacute;dio Nacional de Bras&iacute;lia ou simplesmente Man&eacute; Garrincha, &eacute; um est&aacute;dio de futebol e arena multiuso brasileiro em reconstru&ccedil;&atilde;o na cidade de Bras&iacute;lia, no Distrito Federal. <br />Faz parte do Complexo Poliesportivo Ayrton Senna, que engloba tamb&eacute;m o Gin&aacute;sio Nilson Nelson e o Aut&oacute;dromo Internacional de Bras&iacute;lia Nelson Piquet. Atualmente, o est&aacute;dio est&aacute; em reformas, que v&atilde;o amplicar sua capacidade para mais de 71 mil torcedores. A obra ser&aacute; oficialmente inaugurada no dia 21 de abril de 2013. </div>
+			<div style="margin-top: 20px;" id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.kKe2UZLIk7j4" width="230" height="220"></iframe></div>
 			</div> 
 			
 			
@@ -57,7 +50,16 @@
 		</div>		
 	</div>
 	
+  		<link rel="stylesheet" type="text/css" href="./css/flexslider.css"/>
+ 		<script src="./js/jquery.flexslider-min.js"></script>    
+ 		<script type="text/javascript">
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+			    animation: "slide"
+			  });
+			});
+		
+        </script>
+	
 </body>
 </html>
-
-

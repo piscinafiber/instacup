@@ -20,23 +20,24 @@
         </script>
 	</head>
 <body>
+		<?php
+			include("banco.php");
+			$bd = new Banco();
+			$sql= "select * from jogador where codigo_selecao=".$_GET['selecao'];
+			$resultado = mysql_query($sql);
+			$sql2= "select * from selecao where codigo=".$_GET['selecao'];	
+			$resultado2 = mysql_query($sql2);				
+			$obj2 = mysql_fetch_array($resultado2);
+		?>
         <div id="cabecalho"></div>
 		<div id="content"><center>
-			<div id="Titulo" ><center><h1>Jogadores</h1></center>
-			</div>
+			<div id="Titulo" ><center><div><img src="<?php echo $obj2['foto']; ?>" height='150px' /> <h2 style="text-align:center;"><?php echo $obj2['nome']; ?></h2><br/></center></div><br><br><br><br><br><br><br><br><br>
 			<div id="abaixoTitulo"></div></center>
 			<br>
-			
-			<TABLE width ="370px" height="300px" style="border:none; color:#B2C482; background-color:#B2C482; margin-left:110px; ">				
-				<?php
-				include("banco.php");
-				$bd = new Banco();
-				$sql= "select * from jogador where codigo_selecao=".$_GET['selecao'];
-				$resultado = mysql_query($sql);
-				$sql2= "select * from selecao where codigo=".$_GET['selecao'];	
-				$resultado2 = mysql_query($sql2);				
-				$obj2 = mysql_fetch_array($resultado2);
-				echo"<a href='chamada-jogador.php'><div id=brasao-selecao-tela-lista-jogador><img src=".$obj2['foto']." height='200px' /><center> <h1>".$obj2['nome']."</h1><br><div id='btn-voltar-lista-jogador' width='35' height='35px'>Voltar</div> </a></div>";
+			<center><h2 style="text-align:center;">Jogadores</h2></center><br><br>
+			<center>
+			<TABLE width ="370px" height="300px" style="border:none; color:#B2C482; background-color:#B2C482;">				
+				<?php 
 				while ($obj = mysql_fetch_array($resultado))
 				{
 					echo "<tr height='5px'></tr>";	
@@ -59,7 +60,9 @@
 
 				?>
 
-				</table> 		
+				</table> <br><br>
+				<a href='chamada-jogador.php'><div id='btn-voltar-lista-jogador' width='35' height='35px' style="margin-left: 300px;margin-right: 300px;">Voltar</div></a>
+				</center>		
 				<br>
 			
 			

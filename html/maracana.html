@@ -2,30 +2,23 @@
 <head>
 		 <meta charset="utf-8" />
 		<link rel="stylesheet" href="./css/animate.css"> <!-- Optional -->
-		<link rel="stylesheet" href="./css/liquid-slider.css">
 		<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+		<!--<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />-->
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/easySlider1.7.js"></script>
 		<title>Instacup - Maracana</title>
-        <script type="text/javascript">
+          <script type="text/javascript">
 			
 			$( document ).ready( function(){
 				
 				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
-			$(document).ready(function(){	
-			$("#slider").easySlider({
-				auto: true, 
-				continuous: true
-			});
-		});	
 		
         </script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	</head>
 <body background="../../../imagens/campo.jpg" > 
 
@@ -33,17 +26,17 @@
 		<div id="content"><center>
 			 <div id="Titulo" ><center><h1>Maracana</h1></div>
 			 <div id="abaixoTitulo"></div>
-			<div id="fotosel">
-			<div id="slider" style="margin-left:-30px;">
-				<ul>				
-					<li><img src="../estadios/maracana.jpg" width="800px" style="margin-top:-80px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/maracana2.jpg" width="800px" style="margin-top:-140px;" alt="Css Template Preview" /></a></li>
-					<li><img src="../estadios/maracana3.jpg" width="800px" style="margin-top:-60px;" alt="Css Template Preview" /></a></li>		
+			 <br/>
+			<div class="flexslider">
+				<ul class="slides">			    
+					<li><img src="../estadios/maracana.jpg" /></a></li>
+					<li><img src="../estadios/maracana2.jpg" /></a></li>
+					<li><img src="../estadios/maracana3.jpg" /></a></li>
 				</ul>
-			</div></div>			
-			<div id="textosel2"><p align = "Justify"><h2>O Est&aacute;dio Jornalista Mario Filho, Maracan&atilde;, est&aacute; localizado na Zona Norte tem capacidade para 76.935 espectadores, sendo o maior do Brasil. Na sua hist&oacute;ria, o espa&ccedil;o j&aacute; recebeu grandes cl&aacute;ssicos do futebol e diversos shows. Ele foi constru&iacute;do para a Copa do Mundo de 1950 e tinha o objetivo inicial de ser o maior palco de futebol do planeta. O est&aacute;dio &eacute; considerado um monumento tur&iacute;stico e cultural. Ap&oacute;s a &uacute;ltima reforma, foi instalada uma nova arquibancada com melhor visibilidade, houve maximiza&ccedil;&atilde;o das rampas monumentais e a substitui&ccedil;&atilde;o de todos os assentos. Uma nova cobertura sustent&aacute;vel agora capta &aacute;gua da chuva para reuso.</div>
+			</div>	
+			<div style="margin-top: 20px;" id="textosel2"><p align = "Justify"><h2>O Est&aacute;dio Jornalista Mario Filho, Maracan&atilde;, est&aacute; localizado na Zona Norte tem capacidade para 76.935 espectadores, sendo o maior do Brasil. Na sua hist&oacute;ria, o espa&ccedil;o j&aacute; recebeu grandes cl&aacute;ssicos do futebol e diversos shows. Ele foi constru&iacute;do para a Copa do Mundo de 1950 e tinha o objetivo inicial de ser o maior palco de futebol do planeta. O est&aacute;dio &eacute; considerado um monumento tur&iacute;stico e cultural. Ap&oacute;s a &uacute;ltima reforma, foi instalada uma nova arquibancada com melhor visibilidade, houve maximiza&ccedil;&atilde;o das rampas monumentais e a substitui&ccedil;&atilde;o de todos os assentos. Uma nova cobertura sustent&aacute;vel agora capta &aacute;gua da chuva para reuso.</div>
 			
-			<div id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.ksIpCnNFFof8" width="230" height="220"></iframe></iframe></div>
+			<div style="margin-top: 20px;" id="mapasel"><iframe src="http://mapsengine.google.com/map/embed?mid=zHO5iW3vlR4E.ksIpCnNFFof8" width="230" height="220"></iframe></iframe></div>
 			</div> 
 			
 			
@@ -57,6 +50,17 @@
 				
 		</div>		
 	</div>
+	
+  		<link rel="stylesheet" type="text/css" href="./css/flexslider.css"/>
+ 		<script src="./js/jquery.flexslider-min.js"></script>    
+ 		<script type="text/javascript">
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+			    animation: "slide"
+			  });
+			});
+		
+        </script>
 	
 </body>
 </html>

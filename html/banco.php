@@ -13,8 +13,8 @@ $this->Conectar();
 
 private function Conectar(){
 $this->host = "localhost";
-$this->user = "tipboxar_arena";
-$this->password = "@123xyz@";
+$this->user = "root";
+$this->password = "";
 $this->database = "tipboxar_instacup";
 
 if(mysql_connect($this->host, $this->user, $this->password))

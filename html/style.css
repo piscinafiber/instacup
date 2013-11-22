@@ -624,23 +624,13 @@ a.dcontexto:hover span {
 	word-wrap: break-word;
 	}
 #fotoplacar1{
-	height: 210px;
-	
-	float: left;
-	left: 120px;
-	position: absolute;
-	margin-top: 20px; 
+	left: 90px;
+	position: relative;
+	margin-top: 45px; 
 	background-color: none;	
-	word-wrap: break-word;
 	}
 #fotoplacar2{
-	height: 150	px;
-	float: left;
-	left: 560px;
-	position: absolute;
-	margin-top: 20px; 
-	background-color: none;	
-	word-wrap: break-word;
+
 	}
 #detalhesestadio{
 	width:100px;
@@ -683,12 +673,7 @@ a.dcontexto:hover span {
 	word-wrap: break-word;	 
 	}
 #textoplacar{
-	height: 150	px;
-	position: relative;
-	margin-top: 40px; 
-	background-color: none;	
-	word-wrap: break-word;
-	font-size:35px;
+	font-size:30px;
 	}
 /* FIM PLACAR */
 

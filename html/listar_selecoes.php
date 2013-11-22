@@ -15,15 +15,9 @@
 				$( "#cabecalho" ).load( "cabecalho.php" );
 				$( "#rodape" ).load( "rodape.html" );
 			});
-			$(function(){
-			 $('#slider-id').liquidSlider();
-			});
 		
         </script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="./js/jquery.easing.1.3.js"></script>
-		<script src="./js/jquery.touchSwipe.min.js"></script>
-		<script src="./js/jquery.liquid-slider.min.js"></script>
 		<script>
 		</script>
 	</head>
@@ -31,42 +25,47 @@
 
         <div id="cabecalho"></div>
 		
-		<div id="content"><center>
+		<div id="content">
+			<center>
 			 <div id="Titulo" ><center><h1>Seleções</h1></div> 
 			 <div id="abaixoTitulo"></div>
-			 <table  width="700px">
-			 <tr height="5px"/>
-			 <tr height="30px"/>
-			 <td>
+			
 			 
 				<?php
-				include("banco.php");
-				$bd = new Banco();
-				$sql2= "select codigo, foto, fototime, nome from selecao";	
-				$resultado2 = mysql_query($sql2);
-				echo "<tr height='10px'/>";
+					include("banco.php");
+					$bd = new Banco();
+					$sql2= "select codigo, foto, fototime, nome from selecao";	
+					$resultado2 = mysql_query($sql2);
+					$selecao = array();
+					$i = 0;
+					while ($obj2 = mysql_fetch_array($resultado2)) {
+						$selecao [$i] = $obj2;
+						$i++;
+					}
+				?>
 
-				echo "</table>";
-				echo "<center>";
-				echo "<div class='container'>";				
-				echo "  <div class= 'top-buttons' style=' margin-left:-62px; width:870px;'/>"	;
-				echo "  <div class='liquid-slider'  id='main-slider' style=' margin-left:87px; width:685px; heigth:450px;'/>";
-				
-				while ($obj2 = mysql_fetch_array($resultado2))						
-				{	
-				 echo "
-				 
-					<div>
-					  <h4 class='title' style='display:none;' ><img src='".$obj2['foto']."' height='60px'/><br>".$obj2['nome']."</h4>								  
-					  <div >
-					  <a href='selecao.php?selecao=".$obj2['codigo']."'><img src= ".$obj2['fototime']." width='200px' /></a>
-					</div>
-					</div>";
-				}				
-				?>	
+				<center>
+					<br/><br/>
+				<div id="carousel" class="flexslider">
+				  <ul class="slides">
+				  	<?php foreach ($selecao as $key => $obj2) {
+				    echo "<li>				      
+				      <img src='".$obj2['foto']."'/>".$obj2['nome']."
+				    </li>";
+					}?>
+				  </ul>
+				</div>
+				<div id="slider" class="flexslider">
+				  <ul class="slides">
+				  	<?php foreach ($selecao as $key => $obj2) {
+				    echo "<li>
+				      <a href='selecao.php?selecao=".$obj2['codigo']."'><img src= ".$obj2['fototime']." /></a>
+				    </li>";
+					}?>
+				  </ul>
+				</div>
 
 				</div>
-			</td>
 			
 			
 		</div>	
@@ -74,12 +73,33 @@
 	</div>
 
 <br/>
- <script src="./examples/assets/prism.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/flexslider.css"/>
+  <script src="./examples/assets/prism.js"></script>
   <script src="./js/jquery.easing.1.3.js"></script>
   <script src="./js/jquery.touchSwipe.min.js"></script>
-  <script src="./js/jquery.liquid-slider.min.js"></script>  
+  <script src="./js/jquery.flexslider-min.js"></script>  
   <script>
-    $('#main-slider').liquidSlider();
+    $(window).load(function() {
+		  // The slider being synced must be initialized first
+		  $('#carousel').flexslider({
+		    animation: "slide",
+		    controlNav: false,
+		    animationLoop: false,
+		    slideshow: false,
+		    itemWidth: 150,
+		    itemMargin: 5,
+		    asNavFor: '#slider'
+		  });
+		 
+		  $('#slider').flexslider({
+		    animation: "slide",
+		    controlNav: false,
+		    directionNav: false,
+		    animationLoop: false,
+		    slideshow: false,
+		    sync: "#carousel"
+		  });
+		});
   </script>
 
 </body>
