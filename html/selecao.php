@@ -38,9 +38,8 @@
 				echo "<div id='abaixoTitulo'></div> <br><br>";
 				echo "<div id='foto_selecao'><img src= ".$obj2['fototime']." width='350px' style='border-radius:5px; margin-top:0px'' /></div>";			
 				echo "<table>";
-				echo "<tr height='380px'><td colspan='12'><div id='texto_selecao'><p align = 'Justify'><h2>".utf8_encode($obj2['descricao'])."</tr>";
+				echo "<tr><td colspan='12'><div id='texto_selecao'><p><h2>".utf8_encode($obj2['descricao'])."<br/><br/></tr>";
 				echo "<tr>";
-				echo "<center>";
 				$i=1;
 				while ($obj = mysql_fetch_array($resultado))						
 				{	
